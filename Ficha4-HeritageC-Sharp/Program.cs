@@ -14,7 +14,7 @@ namespace Ficha4_HeritageC_Sharp
             {
                 Console.Clear();
                 Console.WriteLine("1-Inserir Gerente");
-                Console.WriteLine("2-Estado Operário");
+                Console.WriteLine("2-Inserir Operário");
                 Console.WriteLine("3-Visualizar Gerentes");
                 Console.WriteLine("4-Visualizar Operários");
                 Console.WriteLine("5-Visualizar Funcionários");
@@ -99,6 +99,7 @@ namespace Ficha4_HeritageC_Sharp
 
         private static void visualizarGerente()
         {
+
             Console.Clear();
             for (int i = 0; i < funcionarios.Count; i++)
             {
@@ -107,8 +108,45 @@ namespace Ficha4_HeritageC_Sharp
                     Console.WriteLine(funcionarios[i].ToString());
                 }
             }
+
+            Console.WriteLine("Qual o ID do Gerente a alterar?");
+            int op = int.Parse(Console.ReadLine());
+
+            Console.Clear();
+
+            int op2 = 1;
+            while (op2 != 0)
+            {
+                Console.Clear();
+                Console.WriteLine("1-Alterar Valor Hora");
+                Console.WriteLine("2-Calcular Idade");
+                Console.WriteLine("3-Calcular Salário");
+                Console.WriteLine("0-Sair");
+                op2 = int.Parse(Console.ReadLine());
+
+                switch (op2)
+                {
+                    case 0:
+                        break;
+                    case 1:
+                        Gerente.alterarValorHora();
+                        break;
+                    case 2:
+
+                        break;
+                    case 3:
+
+                        break;
+                    default:
+                        Console.WriteLine("Opção inválida");
+                        Console.ReadKey();
+                        break;
+                }
+            }
             Console.ReadKey();
         }
+
+
 
         private static void visualizarOperario()
         {

@@ -29,5 +29,9 @@ namespace Ficha4_HeritageC_Sharp
         {
             return base.ToString()+"\t Especialidade: " +Especialidade+"\t Extensão: "+Extensao;
         }
+        public static void alterarValorHora()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
